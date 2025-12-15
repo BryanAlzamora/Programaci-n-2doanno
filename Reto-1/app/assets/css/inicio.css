@@ -1,0 +1,276 @@
+.inicioMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.inicioBusqueda {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5em;
+    width: 40%;
+    padding-top: 2em;
+}
+
+.inicioBusqueda h1 {
+    text-align: center;
+}
+
+.inicioBuscar {
+    display: flex;
+    justify-content: right;
+    border: 1px solid #1156CC;
+    border-radius: 30px;
+}
+
+.inicioBuscar input {
+    width: 100%;
+    border: 0;
+    border-radius: 30px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: white;
+    padding: 0.75em 1em;
+}
+
+.inicioBotonBuscar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #1156CC;
+    padding: 0.5em 1em;
+    border-radius: 30px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.inicioBotonBuscar:hover{
+    cursor: pointer;
+}
+
+.inicioCategorias {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.inicioCategoria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inicioCategoria img {
+    width: 3em;
+}
+
+.inicioCategoria a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inicioCategoria a p {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #1156CC;
+}
+
+.inicioAnuncios {
+    width: 75%;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.inicioAnuncios p {
+    font-weight: bold;
+    color: #1156CC;
+    font-size: 1.2em;
+}
+
+.anunciosGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5em;
+}
+
+.anuncioCard {
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+    height: 250px; /* altura fija para todas las tarjetas */
+}
+
+.anuncioCard:hover {
+    transform: scale(1.03);
+}
+
+/* Sección superior: imagen */
+.anuncioCard .imagenCard {
+    flex: 7; /* 70% de la tarjeta */
+    width: 100%;
+    overflow: hidden;
+}
+
+.anuncioCard .imagenCard img {
+    width: 100%;
+    height: 100%;       /* ocupa todo el contenedor */
+    object-fit: cover;  /* recorta la imagen si es necesario */
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+/* Sección inferior: información */
+.anuncioCard {
+    flex: 3; /* 40% */
+    background-color: white;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.anuncioCard .infoCard p {
+    color: black;
+    font-size: 0.9em;
+}
+
+.infoCard {
+    padding: 1em 2em;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    font-size: 0.8em;
+}
+
+.nombreComerciante a,
+.nombreAnuncio a{
+    text-decoration: none;
+    color: black;
+}
+
+.nombreComerciante a:hover {
+    color: #1156CC;
+}
+
+.verMas {
+    color: #1156CC;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.infoPrecio {
+    font-size: 1.5em;
+}
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1024px) {
+    .inicioBusqueda {
+        width: 60%;
+    }
+
+    .anunciosGrid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1em;
+    }
+
+    .anuncioCard {
+        height: 220px;
+    }
+}
+
+/* Tablets pequeñas y móviles grandes */
+@media (max-width: 768px) {
+    .inicioBusqueda {
+        width: 80%;
+        padding-top: 1.5em;
+    }
+
+    .inicioCategorias {
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+
+    .anunciosGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+    }
+
+    .anuncioCard {
+        height: 200px;
+    }
+
+    .infoCard {
+        padding: 0.8em 1em;
+    }
+
+    .infoPrecio {
+        font-size: 1.3em;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .inicioBusqueda {
+        width: 95%;
+        padding-top: 1em;
+    }
+
+    .inicioBusqueda h1{
+        font-size: 1.5em;
+    }
+
+    .inicioCategorias {
+        align-items: center;
+    }
+
+    .inicioCategoria img {
+        width: 2em;
+    }
+
+    .inicioCategoria a p {
+        font-size: 0.7em;
+        font-weight: bold;
+        color: #1156CC;
+    }
+
+    .anunciosGrid {
+        grid-template-columns: 1fr;
+        gap: 0.5em;
+    }
+
+    .anuncioCard {
+        height: auto;
+    }
+
+    .infoPrecio {
+        font-size: 1.2em;
+    }
+
+    .infoCard {
+        gap: 0.5em;
+    }
+}

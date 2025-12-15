@@ -1,0 +1,237 @@
+.ajustesMain {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ajustesTitulo {
+    text-align: center;
+    color: #2563eb;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 2rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #2563eb;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ajustesFormulario {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.ajustesFormularioGrupo {
+    margin-bottom: 2rem;
+}
+
+.ajustesLabel {
+    display: block;
+    color: #2563eb;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.ajustesInput[type="text"],
+.ajustesInput[type="password"] {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 2px solid #2563eb;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.ajustesInput[type="text"]:focus,
+.ajustesInput[type="password"]:focus {
+    border-color: #1d4ed8;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.ajustesInput::placeholder {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.ajustesBotones{
+    display: flex;
+    justify-content: center;
+}
+
+.ajustesBoton {
+    display: block;
+    margin: 3rem 1em 0;
+    background-color: #2563eb;
+    color: white;
+    padding: 0.875rem 3rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ajustesBoton:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.ajustesBoton:active {
+    transform: translateY(0);
+}
+
+.ajustesBotonAtras {
+    display: block;
+    margin: 3rem 1em 0;
+    background-color: white;
+    padding: 0.875rem 3rem;
+    border: 2px solid #2563eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;  
+
+    text-decoration: none;
+    color: #2563eb;
+    text-align: center;
+}
+
+
+#mensajeResultado {
+    max-width: 1100px;
+    margin: 1rem auto;
+    padding: 1rem 0rem;
+    border-radius: 8px;
+    font-weight: 700;
+    text-align: left;
+    transition: opacity 0.5s ease;
+}
+
+.visible {
+    display: block;
+}
+
+#mensajeResultado.exito {
+    color: #166534;
+}
+
+#mensajeResultado.error {
+    color: #991b1b
+}
+
+#mensajeResultado.oculto {
+    display: none;
+}
+
+.ajustesFormularioGrupo.ajustesGrupoPassword {
+    position: relative;
+}
+
+.ajustesPasswordWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.ajustesPasswordInput {
+    width: 100%;
+    padding: 0.875rem 2.5rem 0.875rem 1rem;
+    border: 2px solid #2563eb;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    background-color: #f9fafb;
+}
+
+.ajustesPasswordInput:focus {
+    border-color: #1d4ed8;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.ajustesTogglePassword {
+    position: absolute;
+    right: 0.9rem;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1rem;
+    color: #2563eb;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.ajustesTogglePassword:hover {
+    color: #1d4ed8;
+    transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+    .ajustesFormulario {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .ajustesTitulo {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .ajustesFormulario {
+        padding: 1rem;
+    }
+    
+    .ajustesTitulo {
+        font-size: 1.25rem;
+    }
+    
+    .ajustesBotones {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .ajustesPasswordInput {
+        padding-right: 2.2rem; /* espacio para el icono en móvil */
+    }
+
+    .ajustesTogglePassword {
+        right: 0.75rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ajustesFormulario {
+        padding: 0.8rem;
+    }
+
+    .ajustesTitulo {
+        font-size: 1.1rem;
+    }
+
+    .ajustesBoton,
+    .ajustesBotonAtras {
+        width: 100%;
+        margin: 1rem 0 0 0;
+        padding: 0.75rem 0;
+    }
+
+    .ajustesPasswordInput {
+        padding-right: 2rem;
+    }
+
+    .ajustesTogglePassword {
+        right: 0.6rem;
+        font-size: 0.9rem;
+    }
+}

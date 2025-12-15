@@ -1,0 +1,232 @@
+/* ==================================================================================================================
+------------------------------------------------- VENDEDOR SIEMPRE -------------------------------------------------
+================================================================================================================== */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+.vendedorMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.vendedorIcono{
+    color: #1156CC;
+    font-weight: 200;
+}
+.vendedorInfo{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+.vendedorTexto{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+.vendedorTexto h4{
+    color: #1156CC;
+}
+.vendedorTipo h5{
+    display: inline;
+
+}
+.tipoValor{
+    color:#1156CC;
+}
+.vendedorFiltro{
+    margin-bottom: 1em;
+}
+
+.vendedorFiltro select{
+    appearance: none;         /* Estándar */
+    -webkit-appearance: none; /* Safari/Chrome */
+    -moz-appearance: none;    /* Firefox */
+    background: none;         /* Opcional: elimina fondo */
+    padding-right: 1.5em;
+    border: none;
+}
+.vendedorContenido{
+    max-width: 80%;
+}
+
+/* Grid de tarjetas */
+.vendedorLista {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5em;
+}
+
+/* Tarjeta de anuncio */
+.vendedorAnuncioCard {
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+    height: 250px;
+}
+
+.vendedorAnuncioCard:hover {
+    transform: scale(1.03);
+}
+
+/* Imagen */
+.vendedorAnuncioCard .vendedorAnuncioImagen {
+    flex: 7;
+    width: 100%;
+    overflow: hidden;
+}
+
+.vendedorAnuncioCard .vendedorAnuncioImagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+/* Detalles */
+.vendedorAnuncioCard .vendedorAnuncioDetalles {
+    flex: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    text-align: left;
+}
+
+.vendedorAnuncioCard .vendedorAnuncioTexto h5 {
+    color: black;
+    font-size: 1em;
+    margin-bottom: 0.3em;
+}
+
+.vendedorAnuncioCard .vendedorAnuncioTexto .desc {
+    color: #1156CC;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+
+.vendedorAnuncioCard .vendedorAnuncioTexto .fecha {
+    color: #666;
+    font-size: 0.6em;
+}
+
+.vendedorAnuncioCard .vendedorPrecio h4 {
+    color: black;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.vendedorAnuncioTexto a {
+    text-decoration: none;
+}
+
+
+@media (max-width: 1024px) {
+    .vendedorContenido {
+        max-width: 90%;
+    }
+
+    .vendedorAnuncioCard {
+        width: 180px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    .vendedorInfo {
+        flex-direction: column;
+        gap: 0.5em;
+        align-items: center;
+    }
+
+    .vendedorContenido {
+        max-width: 95%;
+    }
+
+    .vendedorAnuncioCard {
+        width: 150px;
+        height: 130px;
+    }
+
+    .vendedorAnuncioDetalles {
+        flex-direction: column;
+        justify-content: center;
+        padding: 0.3em;
+    }
+
+    .vendedorAnuncioDetalles .desc {
+        font-size: smaller;
+    }
+
+    .vendedorAnuncioDetalles .fecha {
+        font-size: xx-small;
+        top: 0.2em;
+        right: 0.5em;
+    }
+
+    .vendedorPrecio {
+        margin-right: 0.5em;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .vendedorInfo {
+        flex-direction: column;
+        gap: 0.5em;
+        align-items: center;
+    }
+
+    .vendedorAnuncioCard {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .vendedorAnuncioImagen {
+        height: 150px;
+    }
+
+    .vendedorAnuncioDetalles {
+        flex-direction: column;
+        position: static;
+        padding: 0.5em;
+        margin-left: 0;
+    }
+
+    .vendedorAnuncioDetalles .desc {
+        font-size: small;
+    }
+
+    .vendedorAnuncioDetalles .fecha {
+        position: static;
+        text-align: right;
+        margin-top: 0.2em;
+    }
+
+    .vendedorPrecio {
+        align-self: flex-start;
+        margin: 0.3em 0;
+    }
+
+    .vendedorLista {
+        flex-direction: column;
+        align-items: center;
+    }
+}

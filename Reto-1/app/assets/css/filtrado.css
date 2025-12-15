@@ -1,0 +1,451 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* ===================== MAIN ===================== */
+.FiltradoMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2.5em;
+  width: 60%;
+}
+
+/* ===================== FILTROS ===================== */
+.filtradoCategorias {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding: 0.5rem;
+  padding-right: 2.5em;
+  border-right: 2px solid #1156CC;
+}
+
+.filtroAnunciosCategoria {
+  display: flex;
+  align-items: center; /* centra imagen + texto */
+  gap: 0.6rem;
+  white-space: nowrap; /* evita wrap de texto */
+}
+
+.filtradoCategorias h4 {
+  text-align: center;
+  margin-bottom: 1em;
+  color: #1156CC;
+  border-bottom: solid #1156CC thin;
+}
+
+.filtradoCategorias ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.filtradoCategorias li {
+  margin: 0.3em 0;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: nowrap;
+  padding: 0.1rem 0.5rem;
+  border-radius: 8px;
+}
+
+.filtradoCategorias li:hover {
+  border-bottom: solid #1156CC thin;
+}
+
+.filtradoCategorias a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.filtradoCategorias img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  display: block;
+}
+
+.filtradoInfoTextos a{
+  text-decoration: none;
+}
+
+.aNombre{
+    color: #000000;
+}
+
+/* ===================== CONTENIDO ===================== */
+.filtradoAnuncioContenido {
+  min-width: 80%;
+}
+
+.filtradoAnuncioContenido h3 {
+  color: #1156CC;
+  margin-bottom: 0.3em;
+}
+
+/* ===================== BÚSQUEDA ===================== */
+.filtradoAnunciosBusqueda {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  background: white;
+  overflow: hidden;
+  gap: 0;
+  border-radius: 1em;
+  margin-bottom: 1em;
+}
+
+
+.filtradoAnunciosBusqueda select {
+  padding: .5em;
+  margin: none;
+  font-size: 0.95rem;
+  border: .1em solid black;
+  color: white;
+  background-color: #1156CC;
+  border-radius: 1em 0em 0em 1em;
+  width: 40%;
+}
+
+
+
+.filtradoAnunciosBusqueda select option {
+  background-color: white;
+  color: #1156CC;
+}
+
+.filtradoAnunciosBusqueda input[type="search"] {
+  padding: .5em;
+  border: .1em solid #1156CC;
+  font-size: 0.95rem;
+  width: 60%;
+  border-radius: 0;
+}
+
+.filtradoAnunciosBusqueda button {
+  background-color: #1156CC;
+  width: 20%;
+  color: white;
+  border: .1em solid black;
+  padding: .7em ;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 0em 1em 1em 0em;
+  font-weight: 500;
+}
+
+/* ===================== ANUNCIOS ===================== */
+/* ===================== ANUNCIOS ===================== */
+.filtradoAnuncioListado {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+}
+
+.filtradoAnunciosAnuncioCard {
+  display: flex;  
+  overflow: hidden;   /*Recorta la imagen a los bordes */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 1em;
+  position: relative;
+  transition: transform 0.2s ease; 
+  height: 20%;
+  max-height: 20%;
+  margin-bottom:1em;
+}
+
+.filtradoAnunciosAnuncioCard:hover {
+  transform: scale(1.03);
+}
+
+.filtradoAnunciosImagen { 
+  width: 50%; 
+  min-width: 180px; 
+  height: 200px; /* altura fija y controlada */ 
+  overflow: hidden; /* evita que sobresalga */ 
+  border-radius: 1em 0 0 1em; /* opcional, para esquinas redondeadas */ 
+} 
+.filtradoAnunciosImagen img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; /* recorta sin deformar */ 
+  object-position: center; 
+}
+
+.filtradoAnunciosInfo {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  gap: 0.4em; /*añade un pequeño espacio natural entre los textos */
+
+}
+
+/* ==== ENCABEZADO: nombre, username y precio ==== */
+.filtradoInfoHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 0.4rem;
+}
+
+.filtradoInfoTextos {
+width: 60%;
+}
+
+.aNombre {
+  font-size: large;
+}
+
+.filtradoAnunciosPrecio {
+    font-weight: bolder;
+    font-size: x-large;
+    align-items: left;
+}
+
+.filtradoFechaAnuncio{
+  position: absolute;
+  top: 0.6em;
+  right: 0.8em;
+  color: #989898;
+  padding: 0.3em 0.6em;
+  border-radius: 0.4em;
+  font-size:x-small;
+  font-weight: 300;
+}
+
+/* ==== DESCRIPCIÓN ==== */
+.filtradoDescripcion {
+  font-size: small;
+  font-style: italic;
+  line-height: 1.4;
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  /*-webkit-line-clamp: 4; /* Número de líneas visibles */
+  -webkit-box-orient: vertical;
+  max-height: 6.5em; /* Aproximado según line-height */
+  margin-top: 0.3em; /*un pequeño espacio debajo del username */
+}
+
+/* ==== FAVORITO ==== */
+.filtradoAnuncioFavorito {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.8rem;
+  display: flex;
+  align-items: center; /* centra texto y svg */
+  gap: 0.4rem;
+}
+.filtradoAnuncioFavorito p {
+  margin: 0;
+  color: #000;
+  font-weight: 500;
+  font-size: 0.95rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+.filtradoAnuncioFavorito a {
+  display: flex;
+  align-items: center;
+  color: #000;
+  text-decoration: none;
+  height: 22px;
+  transition: color 0.3s ease;
+}
+
+.filtradoAnuncioFavorito a svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.filtradoAnuncioFavorito a:hover {
+  color: #1156CC;
+}
+
+.favoritoToggle.favoritoActivo {
+  color: #FFBB00;
+}
+
+/* ===================== PAGINACIÓN ===================== */
+.filtradoAnunciosPaginas {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.filtradoPaginaBtn {
+  background-color: #989898;
+  color: white;
+  font-weight: 750;
+  border: none;
+  padding: 0.7em 1em;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.filtradoPaginaBtn:hover {
+  background-color: #1156CC;
+}
+
+.paginaActiva {
+  background-color: #1156CC;
+  color: white;
+}
+
+
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1024px) {
+  .FiltradoMain {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2em;
+    margin-right: 2em;
+    gap: 1rem;
+  }
+
+  .filtradoCategorias {
+    width: 80%;
+    margin-bottom: 1.5em;
+    border-right: none;
+    border-bottom: 2px solid #1156CC;
+  }
+
+  .filtradoAnuncioContenido {
+    min-width: 95%;
+  }
+
+  .filtradoAnunciosAnuncioCard {
+    flex-direction: row;
+    height: auto;
+  }
+
+  .filtradoAnunciosImagen {
+    width: 40%;
+    min-width: 150px;
+  }
+
+  .filtradoAnunciosInfo {
+    padding: 1em;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+/* Tablets pequeñas y móviles grandes */
+@media (max-width: 768px) {
+  .filtradoAnunciosBusqueda {
+    flex-direction: column;
+    font-size: 0.7em;
+  }
+
+  .filtradoAnunciosBusqueda select{
+    width: auto;
+    border-top-right-radius: 1em;
+    border-bottom-left-radius: 0;
+  }
+
+
+  .filtradoAnunciosBusqueda input[type="search"]{
+    width: auto;
+  }
+
+
+  .filtradoAnunciosBusqueda button {
+    width: auto;
+    border-top-right-radius: 0;
+  }
+
+  .filtradoAnunciosAnuncioCard {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .filtradoAnunciosImagen {
+    width: 100%;
+    min-width: 0;
+    height: 180px;
+  }
+
+  .filtradoAnunciosInfo {
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+
+  .filtradoCategorias {
+    width: 160%;
+    justify-content: center;
+    padding: 1.5rem;
+    padding-right: 1.5em;
+  }
+  .filtradoCategorias ul {
+    flex-direction: row;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  .FiltradoMain {
+    margin: 1em;
+    gap: 0.8rem;
+  }
+
+  .filtradoAnunciosAnuncioCard {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .filtradoAnunciosImagen {
+    width: 100%;
+    height: 150px;
+  }
+
+  .filtradoAnunciosInfo {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .filtradoAnunciosPrecio p {
+    font-size: 1rem;
+  }
+
+  .filtradoFechaAnuncio {
+    font-size: 0.75rem;
+  }
+
+  .filtradoAnunciosImagen {
+    border-bottom-left-radius: 0;
+  }
+}

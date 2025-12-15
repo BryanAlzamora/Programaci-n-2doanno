@@ -1,0 +1,445 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #f9f9f9;
+}
+
+.FavoritoMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2.5em;
+  width: 60%;
+}
+/*Filtros: */
+.FavoritoCategorias{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding: 0.5rem;
+  padding-right: 2.5em;
+  border-right: 2px solid #1156CC;
+}    
+
+.favoritoAnunciosCategoria{
+    display: flex;
+    align-items: center; /* centra imagen + texto */
+    gap: 0.6rem;
+    white-space: nowrap; /* evita wrap de texto */  
+}
+
+.FavoritoCategorias h4 {
+    text-align: center;
+    margin-bottom: 1em;
+    color: #1156CC;
+    border-bottom: solid #1156CC thin;
+}
+
+.FavoritoCategorias ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.FavoritoCategorias li {
+    margin: 0.3em 0;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: nowrap;
+    padding: 0.1rem 0.5rem;
+    border-radius: 8px;
+}
+
+.FavoritoCategorias li:hover {
+    border-bottom: solid #1156CC thin;
+}
+
+.FavoritoCategorias a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.favoritoAnunciosCategoria {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    white-space: nowrap;
+}
+
+.favoritoAnunciosCategoria img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    display: block;
+}
+
+/* ===================== CONTENIDO ===================== */
+.favoritoAnuncioContenido {
+    min-width: 80%;
+}
+
+.favoritoAnuncioContenido h3 {
+    color: #1156CC;
+    margin-bottom: 0.3em;
+}
+
+/*Búsqueda:*/
+.favoritoAnunciosBusqueda select{
+        appearance: none;         /* Estándar */
+        -webkit-appearance: none; /* Safari/Chrome */
+        -moz-appearance: none;    /* Firefox */
+        background: none;         /* Opcional: elimina fondo */
+        padding-right: 1.5em;
+        border: none;
+    }
+    .favoritoAnunciosBusqueda {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    background: white;
+    overflow: hidden;
+    gap: 0;
+    border-radius: 1em;
+    margin-bottom: 1em;
+    }
+
+    .favoritoAnunciosBusqueda select{
+    padding: .5em;
+    margin: none;
+    font-size: 0.95rem;
+    border: .1em solid black;
+    color: white;
+    background-color: #1156CC;
+    border-radius: 1em 0em 0em 1em;
+    width: 40%;
+}
+    .favoritoAnunciosBusqueda select option{
+    background-color: white;
+    color: #1156CC;
+}
+    .favoritoAnunciosBusqueda input[type="search"]{
+    padding: .5em;
+    border: .1em solid #1156CC;
+    font-size: 0.95rem;
+    width: 60%;
+    border-radius: 0;
+    
+}
+    
+    .favoritoAnunciosBusqueda button {
+    background-color: #1156CC;
+    width: 20%;
+    color: white;
+    border: .1em solid black;
+    padding: .7em ;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 0em 1em 1em 0em;
+    font-weight: 500;
+}
+
+/* ===================== ANUNCIOS ===================== */
+.favoritoAnuncioListado {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.favoritoAnuncioCard {
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 1em;
+    position: relative;
+    transition: transform 0.2s ease; 
+}
+
+.favoritoAnuncioCard:hover {
+    transform: scale(1.03);
+}
+
+.favoritoAnunciosImagen{
+    width: 50%; 
+    min-width: 180px; 
+    height: 200px;  
+}
+.favoritoAnunciosImagen img {
+    display: block;           /* elimina gaps por inline images */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        /* <- ocupa todo y recorta sin deformar */
+    object-position: center; 
+    
+}
+
+.favoritoAnunciosInfo {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 0.4em;
+}
+
+.favoritoInfoHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 0.4rem;
+}
+
+.favoritoInfoTextos {
+    width: 60%;
+}
+
+.favoritoInfoTextos h4 {
+    font-size: large;
+}
+
+.favoritoInfoTextos h5 {
+    font-size: medium;
+    color: #1156CC;
+}
+
+.favoritoAnunciosPrecio {
+    display: flex;
+    flex-direction: column; /* Apila fecha sobre precio */
+    align-items: flex-end;  /* Mantiene el precio alineado a la derecha */
+    font-weight: bolder;
+    font-size: 1.3em;
+    gap: 0.2em; /* espacio entre fecha y precio */
+}
+
+.favoritoDescripcion {
+    font-size: small;
+    font-style: italic;
+    line-height: 1.4;
+    text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    max-height: 6.5em;
+}
+
+.favoritoFechaAnuncio {
+  position: absolute;
+  top: 0.6em;
+  right: 0.8em;
+  color: #989898;
+  padding: 0.3em 0.6em;
+  border-radius: 0.4em;
+  font-size:x-small;
+  font-weight: 300;
+}
+
+.favoritoAnuncioFavorito {
+    position: absolute;
+    right: 1rem;
+    bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.favoritoAnuncioFavorito p {
+    margin: 0;
+    color: #000;
+    font-weight: 500;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+}
+
+.favoritoAnuncioFavorito a {
+    display: flex;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+    height: 22px;
+}
+
+.favoritoAnuncioFavorito a:hover {
+    color: #1156CC;
+}
+
+.favoritoToggle.favoritoActivo {
+    color: #FFBB00;
+}
+
+.favoritoInfoTextos a{
+    text-decoration: none;
+    color: black;
+}
+
+/* ===================== PAGINACIÓN ===================== */
+.favoritoAnunciosPaginas {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.favoritoPaginaBtn {
+    background-color: #989898;
+    color: white;
+    font-weight: 750;
+    border: none;
+    padding: 0.7em 1em;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.favoritoPaginaBtn:hover {
+    background-color: #1156CC;
+}
+
+.paginaActiva {
+    background-color: #1156CC;
+    color: white;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+    
+@media (max-width: 1024px) {
+    .FavoritoMain {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 2em;
+        margin-right: 2em;
+        gap: 1rem;
+    }
+
+    .FavoritoCategorias {
+      width: 80%;
+      margin-bottom: 1.5em;
+      border-right: none;
+      border-bottom: 2px solid #1156CC;
+    }
+
+    .favoritoAnunciosAnuncioCard {
+        flex-direction: row;
+        height: auto;
+    }
+
+    .favoritoAnunciosImagen {
+        width: 40%;
+        min-width: 150px;
+    }
+
+    .favoritoAnunciosInfo {
+        width: 60%;
+    }
+
+    .favoritoAnuncioContenido {
+        min-width: 95%;
+    }
+}
+
+/* Tablets pequeñas y móviles grandes */
+@media (max-width: 768px) {
+    .favoritoAnunciosBusqueda {
+        flex-direction: column;
+        font-size: 0.7em;
+    }
+
+    .favoritoAnunciosBusqueda select{
+        width: auto;
+        border-top-right-radius: 1em;
+        border-bottom-left-radius: 0;
+    }
+
+
+    .favoritoAnunciosBusqueda input[type="search"]{
+        width: auto;
+    }
+
+
+    .favoritoAnunciosBusqueda button {
+        width: auto;
+        border-top-right-radius: 0;
+    }
+
+    .favoritoAnunciosAnuncioCard {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .favoritoAnunciosImagen {
+        width: 100%;
+        min-width: 0;
+        height: 180px;
+    }
+
+    .favoritoInfoHeader{
+        width: 100%;
+        justify-content: left;
+        flex-direction: column;
+    }
+
+    .favoritoAnunciosInfo {
+        width: 100%;
+        padding: 0.75rem 1rem;
+    }
+
+    .favoritoAnunciosPrecio p {
+        font-size: 0.5em;
+    }
+
+    .FavoritoCategorias {
+        width: 160%;
+        justify-content: center;
+        padding: 1.5rem;
+        padding-right: 1.5em;
+    }
+
+    .FavoritoCategorias ul {
+        flex-direction: row;
+        gap: 0.4rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .favoritoFechaAnuncio {
+        position: relative;
+    }
+
+    .favoritoInfoTextos{
+        width: 100%;
+        justify-content: left;
+    }
+
+    .favoritoAnunciosPrecio{
+        width: 100%;
+        justify-content: left;
+    }
+
+    .favoritoAnunciosPrecio p{
+        width: 100%;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+
+}

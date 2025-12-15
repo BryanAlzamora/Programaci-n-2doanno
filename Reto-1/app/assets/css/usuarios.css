@@ -1,0 +1,170 @@
+.usuariosMain {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    gap: 2em;
+    min-height: 37.2em;
+}
+
+.usuariosTipos {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.usuariosClientes,
+.usuariosComerciantes,
+.usuariosGestores {
+    border: 1px solid #1156CC;
+    border-radius: 20px;
+    padding: 2em;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.usuariosDatosClientes,
+.usuariosDatosComerciantes,
+.usuariosDatosGestores {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.usuariosDatos {
+    width: 32%;
+    display: flex;
+    justify-content: center;
+}
+
+.cliente,
+.comerciante,
+.gestor {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border: 2px solid #1156CC;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+}
+
+
+.usuariosEdicion{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.2em;
+}
+
+.usuariosEdicion a {
+    border: none;
+    color: black;
+}
+.usuariosEdicion a :hover{
+    color: #1156CC;
+}
+
+.usuarioInformacion :nth-child(1){
+    color: #1156CC;
+    font-weight: bold;
+}
+
+
+.selected {
+    border: 2px solid #1156CC;
+    color: #1156CC;
+}
+
+/* Ocultar elementos por defecto */
+.hidden {
+    display: none;
+}
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1024px) {
+    .usuariosTipos {
+        width: 80%;
+        gap: 1.5em;
+        flex-wrap: wrap;
+    }
+
+    .usuariosDatos {
+        width: 48%;
+    }
+}
+
+/* Tablets pequeñas y móviles grandes */
+@media (max-width: 768px) {
+    .usuariosMain {
+        gap: 1.5em;
+    }
+
+    .usuariosTipos {
+        width: 90%;
+        gap: 1em;
+        align-items: center;
+    }
+
+    .usuariosClientes,
+    .usuariosComerciantes,
+    .usuariosGestores {
+        width: auto;
+        padding: 1em;
+        font-size: 0.7em;
+        text-align: center;
+    }
+
+    .usuariosDatos {
+        width: 100%;
+    }
+
+    .cliente,
+    .comerciante,
+    .gestor {
+        gap: 0.5em;
+        padding: 0.5em;
+    }
+
+    .usuariosEdicion {
+        justify-content: flex-start;
+        gap: 0.5em;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .usuariosTipos {
+        width: 100%;
+        gap: 0.8em;
+    }
+
+    .usuariosDatosClientes,
+    .usuariosDatosComerciantes,
+    .usuariosDatosGestores {
+        gap: 0.8em;
+        width: 80%;
+    }
+
+    .cliente,
+    .comerciante,
+    .gestor {
+        gap: 0.3em;
+        padding: 0.4em;
+    }
+
+    .usuariosEdicion {
+        justify-content: flex-start;
+        gap: 0.3em;
+    }
+
+    .usuariosDatos {
+        width: 100%;
+    }
+
+    .usuarioInformacion p {
+        font-size: 0.8em;
+    }
+}

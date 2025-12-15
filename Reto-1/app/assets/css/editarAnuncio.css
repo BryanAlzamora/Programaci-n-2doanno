@@ -1,0 +1,279 @@
+.editarMain {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.editarImagen {
+    width: 100%;
+    height: 140px;
+    border: 2px solid #2563eb;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2563eb;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+.editarImagen:hover {
+    background-color: #eff6ff;
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.2);
+}
+
+.editarImagen img {
+    max-width: 220px;
+    max-height: 120px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+}
+
+.editarImagen img:hover {
+    transform: scale(1.03);
+}
+
+.editarTitulo {
+    text-align: center;
+    color: #2563eb;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 2rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #2563eb;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.editarFormulario {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.editarCampo {
+    margin-bottom: 2rem;
+}
+
+.editarLabel {
+    display: block;
+    color: #2563eb;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.editarInput[type="text"],
+.editarInput[type="file"],
+.editarInput[type="password"],
+.editarInput[type="number"],
+.editarInput[type="email"],
+.editarInput[type="textarea"],
+.editarInput select,
+.editarCampo[type="text"],
+.editarCampo[type="file"],
+.editarCampo[type="textarea"],
+.editarCampo select,
+textarea.editarInput {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 2px solid #2563eb;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.editarInput:focus,
+textarea.editarInput:focus,
+select.editarInput:focus {
+    border-color: #1d4ed8;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.editarInput::placeholder,
+textarea.editarInput::placeholder {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+#descripcion {
+    resize: none;
+    height: 150px;
+}
+
+.editarFila {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.editarFormulario .editarBoton {
+    display: block;
+    margin: 3rem 1em 0;
+    background-color: #2563eb;
+    color: white;
+    padding: 0.875rem 3rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.editarFormulario .editarBoton:hover {
+    background-color: #1d4ed8;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.editarFormulario .editarBoton:active {
+    transform: translateY(0);
+}
+
+.editarBotones{
+    display: flex;
+    justify-content: center;
+}
+
+.editarBotonAtras {
+    display: block;
+    margin: 3rem 1em 0;
+    background-color: white;
+    padding: 0.875rem 3rem;
+    border: 2px solid #2563eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;  
+
+    text-decoration: none;
+    color: #2563eb;
+    text-align: center;  
+}
+#mensajeResultado {
+    max-width: 1100px;
+    margin: 1rem auto;
+    padding: 1rem 0rem;
+    border-radius: 8px;
+    font-weight: 700;
+    text-align: left;
+    transition: opacity 0.5s ease;
+}
+
+.visible {
+    display: block;
+}
+
+#mensajeResultado.exito {
+    color: #166534;
+}
+
+#mensajeResultado.error {
+    color: #991b1b
+}
+
+#mensajeResultado.oculto {
+    display: none;
+}
+
+/* Tablets medianas */
+@media (max-width: 1024px) {
+    .editarFormulario {
+        padding: 1.5rem;
+        width: 90%;
+    }
+
+    .editarTitulo {
+        font-size: 1.35rem;
+        margin: 1.5rem 0;
+    }
+
+    .editarFila {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .editarBoton,
+    .editarBotonAtras {
+        padding: 0.8rem 2.5rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Tablets pequeñas y móviles grandes */
+@media (max-width: 768px) {
+    .editarFormulario {
+        padding: 1rem;
+    }
+
+    .editarTitulo {
+        font-size: 1.25rem;
+        margin: 1.2rem 0;
+    }
+
+    .editarFila {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .editarBotones {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .editarBoton,
+    .editarBotonAtras {
+        padding: 0.75rem 2rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .editarFormulario {
+        padding: 0.8rem;
+    }
+
+    .editarTitulo {
+        font-size: 1.1rem;
+        margin: 1rem 0;
+    }
+
+    .editarFila {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .editarBoton,
+    .editarBotonAtras {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .editarBotonAtras {
+        margin: 1rem 1em 0;
+    }
+
+    .editarImagen {
+        height: 120px;
+        font-size: 1.5rem;
+    }
+
+    #descripcion {
+        height: 120px;
+    }
+}

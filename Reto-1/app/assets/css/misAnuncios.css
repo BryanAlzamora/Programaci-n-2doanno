@@ -1,0 +1,450 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;font-family: 'Montserrat', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+.misAnunciosMain {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2.5em;
+    width: 60%;
+}
+/*Filtros: */
+.misAnunciosCategorias{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    padding-right: 2.5em;
+    border-right: 2px solid #1156CC;
+}
+.misAnunciosCategoria {
+    display: flex;
+    flex-direction: row;
+    align-items: center;   /* centra verticalmente imagen + texto */
+    gap: 0.6rem;
+    white-space: nowrap;   /* evita que el texto realice wrap debajo del icono */
+    overflow: hidden;
+}
+.misAnunciosCategoria img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    display: block;
+}
+.misAnunciosCategorias h4 {
+    text-align: center;
+    margin-bottom: 1em;
+    color: #1156CC;
+    border-bottom: solid #1156CC thin;
+}
+
+.misAnunciosCategorias a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+.misAnunciosCategorias ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.misAnunciosCategorias li {
+    margin: 0.3em 0;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: nowrap;
+    padding: 0.1rem 0.5rem;
+    border-radius: 8px;
+}
+.misAnunciosCategorias li:hover {
+    border-bottom: solid #1156CC thin;
+}
+.misAnunciosContenido{
+    min-width: 80%;
+}
+.misAnunciosContenido h3{
+    color:#1156CC;
+    margin-bottom: .3em;    
+}
+/*Búsqueda:*/
+
+.misAnunciosformularioBusqueda select{
+    appearance: none;         /* Estándar */
+    -webkit-appearance: none; /* Safari/Chrome */
+    -moz-appearance: none;    /* Firefox */
+    background: none;         /* Opcional: elimina fondo */
+    padding-right: 1.5em;
+    border: none;
+}
+.misAnunciosformularioBusqueda {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    background: white;
+    overflow: hidden;
+    gap: 0;
+    border-radius: 1em;
+    margin-bottom: 1em;
+}
+
+.misAnunciosformularioBusqueda select{
+    padding: .5em;
+    margin: none;
+    font-size: 0.95rem;
+    border: .1em solid black;
+    color: white;
+    background-color: #1156CC;
+    border-radius: 1em 0em 0em 1em;
+    width: 40%;
+}
+.misAnunciosformularioBusqueda select option{
+    background-color: white;
+    color: #1156CC;
+}
+.misAnunciosformularioBusqueda input[type="search"]{
+    padding: .5em;
+    border: .1em solid #1156CC;
+    font-size: 0.95rem;
+    width: 60%;
+    border-radius: 0;
+}
+
+.misAnunciosformularioBusqueda button {
+    background-color: #1156CC;
+    width: 20%;
+    color: white;
+    border: .1em solid black;
+    padding: .7em ;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 0em 1em 1em 0em;
+    font-weight: 500;
+}
+/*Anuncios: */
+.misAnunciosLista{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.misAnunciosInfo {
+    padding: 1em;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+.misAnunciosDetalles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+}
+.misAnunciosTexto{
+    width: 70%;
+    padding: .5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 1.4; /* 🔹 separa las líneas del texto */
+    overflow: hidden; 
+    max-height: 150px;
+}
+.misAnunciosTexto a{
+    text-decoration: none;
+}
+
+.misAnunciosTexto h4{
+    font-size: large;
+}
+.misAnunciosTexto h5{
+    font-size: medium;
+    color: #1156CC;
+}
+.misAnunciosAnuncioCard {
+    display: flex;  
+    overflow: hidden;   
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 1em;
+    position: relative;
+    transition: transform 0.2s ease; 
+    height: 200px; 
+    margin-bottom: 1em;
+}
+
+.misAnunciosAnuncioCard:hover {
+    transform: scale(1.03);
+}
+
+.misAnunciosImagen {
+    width: 50%; 
+    min-width: 180px;
+    height: 200px; 
+    overflow: hidden; 
+    border-radius: 1em 0 0 1em;
+}
+
+.misAnunciosImagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.misAnunciosInfo {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 0.4em;
+}
+
+.misAnunciosInfoHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 0.4rem;
+}
+
+.misAnunciosInfoTextos {
+    width: 60%;
+}
+
+.aNombre {
+    font-size: large;
+}
+
+.aVendedor {
+    font-size: medium;
+    color: #1156CC;
+    font-weight: bold;
+}
+
+.misAnunciosPrecio {
+    font-weight: bolder;
+    font-size: x-large;
+    align-items: left;
+}
+
+.misAnunciosDescripcion {
+    font-size: small;
+    font-style: italic;
+    line-height: 1.4;
+    text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    max-height: 6.5em;
+    margin-top: 0.3em;
+}
+
+.misAnunciosFecha {
+    position: absolute;
+    top: 0.6em;
+    right: 0.8em;
+    color: #989898;
+    padding: 0.3em 0.6em;
+    border-radius: 0.4em;
+    font-size: x-small;
+    font-weight: 300;
+}
+
+.misAnunciosEdicion {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5em;
+}
+
+.misAnunciosEdicion div a {
+    text-decoration: none;
+    color: black;
+}
+
+.misAnunciosEdicion div a:hover {
+    color: #1156CC;
+}
+
+.misAnunciosInfoTextos a{
+    text-decoration: none;
+    color: black;
+}
+
+/* Paginación */
+.misAnunciosPaginas {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.paginaBtn {
+    background-color: #989898;
+    color: white;
+    font-weight: 750;
+    border: none;
+    padding: .7em;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.paginaBtn:hover {
+    background-color: #1156CC;  
+}
+
+.paginaActiva {
+    background-color: #1156CC;
+    color: white;
+}
+
+.misAnunciosEdicion div a {
+    text-decoration: none;
+    color: black;
+}
+
+.misAnunciosEdicion div a:hover {
+    color: #1156CC;
+}
+
+@media (max-width: 1024px) {
+    .misAnunciosMain {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 2em;
+        margin-right: 2em;
+        gap: 1rem;
+    }
+
+    .misAnunciosCategorias {
+        width: 80%;
+        margin-bottom: 1.5em;
+        border-right: none;
+        border-bottom: 2px solid #1156CC;
+    }
+
+    .misAnunciosContenido {
+        min-width: 95%;
+    }
+
+    .misAnunciosAnuncioCard {
+        flex-direction: row;
+        height: auto;
+    }
+
+    .misAnunciosImagen {
+        width: 40%;
+        min-width: 150px;
+    }
+
+    .misAnunciosTexto {
+        width: 60%;
+    }
+}
+
+/* Tablets pequeñas y móviles grandes */
+@media (max-width: 768px) {
+    .misAnunciosformularioBusqueda {
+        flex-direction: column;
+        font-size: 0.7em;
+    }
+
+    .misAnunciosformularioBusqueda select{
+        width: auto;
+        border-top-right-radius: 1em;
+        border-bottom-left-radius: 0;
+    }
+
+
+    .misAnunciosformularioBusqueda input[type="search"]{
+        width: auto;
+    }
+
+
+    .misAnunciosformularioBusqueda button {
+        width: auto;
+        border-top-right-radius: 0;
+    }
+
+
+    .misAnunciosAnuncioCard {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .misAnunciosImagen {
+        width: 100%;
+        min-width: 0;
+        height: 180px;
+    }
+
+    .misAnunciosTexto {
+        width: 100%;
+        padding: 0.5rem 0;
+    }
+
+    .misAnunciosCategorias {
+        width: 160%;
+        justify-content: center;
+        padding: 1.5rem;
+        padding-right: 1.5em;
+    }
+
+    .misAnunciosCategorias ul {
+        flex-direction: row;
+        gap: 0.4rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .misAnunciosMain {
+        margin: 1em;
+        gap: 0.8rem;
+    }
+
+    .misAnunciosAnuncioCard {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .misAnunciosImagen {
+        width: 100%;
+        height: 150px;
+    }
+
+    .misAnunciosTexto h4 {
+        font-size: 1rem;
+    }
+
+    .misAnunciosTexto h5 {
+        font-size: 0.9rem;
+    }
+
+    .misAnunciosPrecio {
+        font-size: 1rem;
+    }
+
+    .misAnunciosFecha {
+        font-size: 0.75rem;
+    }
+}

@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.anunciosMain {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2.5em;
+    width: 60%;
+}
+
+.misAnunciosEdicion div a {
+    text-decoration: none;
+    color: black;
+}
+
+.misAnunciosEdicion div a:hover {
+    color: #1156CC;
+}
+
+/* Tablets medianas */
+@media (max-width: 1024px) {
+    .anunciosMain {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 2em;
+        margin-right: 2em;
+        gap: 1rem;
+    }
+}
+
+/* Tablets pequeñas y móviles grandes */
+@media (max-width: 768px) {
+
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .anunciosMain {
+        margin: 1em;
+        gap: 0.8rem;
+    }
+}
