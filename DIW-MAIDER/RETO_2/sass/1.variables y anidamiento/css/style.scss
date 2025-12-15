@@ -1,0 +1,52 @@
+@use "sass:map";
+//colores
+$white:#fff;
+$darkGrey:#333;
+$navColor:rgb(155, 111, 145);
+
+$mainContainer: 80% center;
+
+$borderWidth:0.1rem;
+$style:solid;
+$typeRadios:(
+    'pequenno' : 0.2rem,
+    'mediano' : 1rem,
+    'grande' : 2rem
+);
+
+$footImagen: 25%;
+
+.container{
+    width: $mainContainer;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+
+nav{
+    background:$navColor;
+    width:100%;
+    ul{
+        display:flex;
+        list-style:none;
+        gap:1em;
+            li:hover{
+                color:$white;
+        }
+    }
+}
+
+.card{
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    width:$footImagen;
+    padding:10px;
+    border: $borderWidth $style $darkGrey;
+    border-radius: map.get($typeRadios,'mediano');
+}
+
+.card img{
+    border:none;
+    border-radius: map.get($typeRadios,'grande');
+}

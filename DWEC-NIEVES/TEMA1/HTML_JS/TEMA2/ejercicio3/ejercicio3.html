@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="ejercicio3.css">
+        <title>Ejercicio3</title>
+    </head>
+    <body>
+        <p>
+            Crea un formulario como el de la imagen y en el clic del boton enviar ´
+            comprueba que se han introducido todos los datos y que son vali- ´
+            dos. Estos datos, posteriormente, los mostraremos en un cuadro de
+            dialogo.  
+        </p>
+        <h1>Formulario</h1>
+        <div class="bloque1">
+        <label>Nombre:</label><input type="text" name="nombre" id="nombre">
+
+        <label>Apellidos:</label><input type="text" name="apellidos" id="apellidos">
+
+        <label>Correo Electronico:</label><input type="text" name="correo" id="correo">
+
+        <label>Poblacion:</label><input type="text" name="poblacion" id="poblacion">
+
+        <label>Provincia:</label><input type="text" name="provincia" id="provincia">
+        </div>
+        <div class="bloque2">
+        <label>Edad: </label>
+        <label><input type="radio" name="edad" value="0-20">0-20</label>
+        <label><input type="radio" name="edad" value="20-40">20-40</label>
+        <label><input type="radio" name="edad" value="40-60">40-60</label>
+        <label><input type="radio" name="edad" value="60-100">60-100</label>
+        </div>
+        <div class="bloque3">
+        <label>Como nos has conocido:</label>
+        <label><input type="checkbox" name="contacto" value="amigo">A través de un amigo</label>
+        <label><input type="checkbox" name="contacto" value="buscador">Através de un buscador</label>
+        <label><input type="checkbox" name="contacto" value="navegando">Navegando por internet</label>
+        <label><input type="checkbox" name="contacto" value="otros">Otros</label>
+        </div>
+        <div class="bloque4">
+        <input type="button" value="Enviar formulario" id="enviar">
+        <input type="button" value="Borrar formulario" id="borrar">
+        </div>  
+    </body>
+    <script src="ejercicio3.js"></script>
+</html>

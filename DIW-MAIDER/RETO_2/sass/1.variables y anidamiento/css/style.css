@@ -1,0 +1,36 @@
+.container {
+  width: 80% center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+nav {
+  background: rgb(155, 111, 145);
+  width: 100%;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1em;
+}
+nav ul li:hover {
+  color: #fff;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 25%;
+  padding: 10px;
+  border: 0.1rem solid #333;
+  border-radius: 1rem;
+}
+
+.card img {
+  border: none;
+  border-radius: 2rem;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Mountain madness</title>
+
+    <style>
+      #logo{
+        width:40px;
+        height:30px;
+      }
+    </style>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container-fluid">
+    <!-- NAVBAR -->
+    <!-- Solo mayor a md -->
+    <div class="row d-none d-md-block aling-content-center">
+      <div class="col-md-12">
+        <nav class="nav bg-dark">
+          <a href="#" class="nav-link text-white"><img src="./img/logo.png" id="logo" alt="logo"></a>
+          <a href="#" class="nav-link text-white">Servicios</a>
+          <a href="#" class="nav-link text-white">Sobre nosotros</a>
+          <a href="#" class="nav-link text-white">Contacto</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Solo menor a md -->
+    <div class="row d-md-none bg-dark p-2">
+
+      <!-- Logo -->
+      <a href="#" class="col-10">
+        <img src="./img/logo.png" id="logo" alt="logo">
+      </a>
+
+      <!-- Menu hamburguesa -->
+      <nav class="navbar navbar-dark bg-dark col-2">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+          <span class="navbar-toggler-icon" width="40px" height="30px"></span>
+        </button>
+      </nav>
+
+      <!-- Menú desplegable -->
+      <div class="collapse" id="menu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link text-white" href="#">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Sobre nosotros</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Contacto</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+
+    <!-- CAROUSEL -->
+    <!--En el tamaño xs no se vera-->
+   <div class="row d-none d-sm-block">
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./img/1.jpg" class="d-block w-100" alt="imagenUno">
+          <div class="carousel-caption d-none d-md-block">
+            <h2>Lorem Ipsum dolor</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Sed ut perspiciatis unde omnis iste natus error sit voluptatem,Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./img/2.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h2>Lorem Ipsum dolor</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Sed ut perspiciatis unde omnis iste natus error sit voluptatem,Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./img/3.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h2>Lorem Ipsum dolor</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Sed ut perspiciatis unde omnis iste natus error sit voluptatem,Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>  
+    <!-- Marketing messaging and featurettes-->
+    <!-- Una fila que se divide en 3 columnas iguales para md o tamaños superiores. En tamaños menores ocupan toda la fila. Las imagenes son responsivas, con clase bootstrap. Por medio de CSS ponerles una anchura y una altura de 250 y redondearlas.-->
+    <div class="row">
+      <div class="col-12 col-md-4">    
+        <h2>Alpes</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Sed ut perspiciatis unde omnis iste natus error sit voluptatem,Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+      </div>
+
+      <div class="col-12 col-md-4">
+          <h2>Nepal</h2>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Sed ut perspiciatis unde omnis iste natus error sit voluptatem,Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+      </div>
+
+      <div class="col-12 col-md-4">
+          <h2>Pirineos</h2>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Sed ut perspiciatis unde omnis iste natus error sit voluptatem,Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+      </div>
+    </div>
+      <!--Contenedor para los tres bloques sobre nosotros. La imagenes deben tener el borde y flotar. Esto se hace por medio de clases bootstrap.-->
+
+          <hr class="featurette-divider">
+          <h2>Sobre nosotros</h2>       
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, </p>
+
+          <hr class="featurette-divider">
+          <h2>Sobre nosotros</h2>
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, </p>
+
+          <hr class="featurette-divider">
+          <h2>Sobre nosotros</h2>
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, </p>
+
+
+      <!--Formulario horizontal-->
+        <hr class="featurette-divider">
+        
+      <!-- FOOTER-->    
+        <p>&copy; 2015 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p><a href="#">Back to top</a></p> 
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </div>
+</body>
+</html>

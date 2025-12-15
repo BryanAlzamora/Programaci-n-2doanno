@@ -1,0 +1,26 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial;
+}
+ul{
+	display: flex;
+	list-style: none;
+	flex-direction: column;
+	width: 30%;
+}
+li{
+	display: flex;
+	justify-content: space-between;
+	background-color: lightgrey;
+	align-items: center;
+	padding: 1em;
+	margin: .2em;
+}
+a{
+	background-color: white;
+	text-decoration: none;
+	padding: .2em;
+	color: black;
+}

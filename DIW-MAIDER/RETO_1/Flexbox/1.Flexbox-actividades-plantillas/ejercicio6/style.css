@@ -1,0 +1,27 @@
+.columna{
+	border-radius: .5em;
+	box-shadow: 3px 3px 3px 0 #5B5B5B;
+}
+.top{
+	border-radius: .5em .5em 0 0;
+}
+
+.bot a{	
+	border-radius: .2em;
+}
+.mid{
+
+}
+.bot{
+
+}
+.top{
+
+}
+.contenedor{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	gap: 2em;
+}

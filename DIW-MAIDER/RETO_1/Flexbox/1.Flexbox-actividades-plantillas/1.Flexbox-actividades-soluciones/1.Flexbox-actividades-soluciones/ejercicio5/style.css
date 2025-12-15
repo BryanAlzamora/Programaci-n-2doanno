@@ -1,0 +1,39 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+body{
+	height: 100vh;
+}
+header, footer{
+	background-color: lightgrey;
+	height: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+header{
+	height: 20%;
+}
+main{
+	display: flex;
+	height: 70%;
+}
+main > *{
+	flex-grow: 1;
+	background-color: darkgrey;
+	padding: 1em;
+}
+main nav{
+	order: -1;
+}
+main article{
+	flex-grow: 2;
+	background-color: grey;
+	padding: 1em 0;
+}
+article h2{
+	padding-bottom: 1em;
+}

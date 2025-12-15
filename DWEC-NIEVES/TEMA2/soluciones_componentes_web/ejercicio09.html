@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Ejercicio 09 - reloj-digital (observedAttributes)</title>
+</head>
+<body>
+  <reloj-digital formato="24"></reloj-digital>
+  <reloj-digital formato="12"></reloj-digital>
+
+  <script>
+    // Ejercicio 9: Reloj que observa el atributo "formato"
+    class RelojDigital extends HTMLElement {
+      static get observedAttributes() { return ["formato"]; }
+
+      constructor() {
+        super();
+        this.attachShadow({ mode: "open" });
+        this.formato = this.getAttribute("formato") || "24";
+        this._timer = null;
+      }
+
+      connectedCallback() {
+        this._start();
+      }
+
+      disconnectedCallback() {
+        clearInterval(this._timer);
+      }
+
+      attributeChangedCallback(name, oldValue, newValue) {
+        if (name === "formato") {
+          this.formato = newValue || "24";
+          this._render();
+        }
+      }
+
+      _start() {
+        this._render();
+        this._timer = setInterval(() => this._render(), 1000);
+      }
+
+      _render() {
+        const now = new Date();
+        let hours = now.getHours();
+        let minutes = String(now.getMinutes()).padStart(2, "0");
+        let seconds = String(now.getSeconds()).padStart(2, "0");
+        let suffix = "";
+
+        if (this.formato === "12") {
+          suffix = hours >= 12 ? " PM" : " AM";
+          hours = hours % 12 || 12;
+        }
+        this.shadowRoot.innerHTML = `
+          <style>
+            .reloj { font-family: monospace; font-size: 1.2rem; background: #222; color: #fff; padding:6px 10px; border-radius:6px; display:inline-block; margin:6px; }
+          </style>
+          <div class="reloj">${hours}:${minutes}:${seconds}${suffix}</div>
+        `;
+      }
+    }
+
+    customElements.define("reloj-digital", RelojDigital);
+  </script>
+</body>
+</html>

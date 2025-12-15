@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Ejercicio 01 - mi-saludo</title>
+</head>
+<body>
+  <!-- Uso del componente -->
+  <mi-saludo></mi-saludo>
+
+  <script>
+    // Ejercicio 1: Componente simple que muestra "Hola, mundo 🌎"
+    class MiSaludo extends HTMLElement {
+      connectedCallback() {
+        this.innerHTML = "<p>Hola, mundo 🌎</p>";
+      }
+    }
+    customElements.define("mi-saludo", MiSaludo);
+  </script>
+</body>
+</html>

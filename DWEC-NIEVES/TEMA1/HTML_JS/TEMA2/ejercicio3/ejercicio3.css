@@ -1,0 +1,15 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+    height:100vh;
+    justify-content:center;
+}
+div{
+    gap:2;
+    padding:1em;
+    display:flex;
+    flex-direction:column;
+}

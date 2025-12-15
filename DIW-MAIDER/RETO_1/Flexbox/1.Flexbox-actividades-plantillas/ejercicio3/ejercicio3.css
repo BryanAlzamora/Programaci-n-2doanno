@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgrey;
+    height: 100vh;
+}
+div{
+    background-color: grey;
+    max-width: 30%;
+    padding: 1em;
+}
+div p{
+    padding-top: 1em;
+
+}

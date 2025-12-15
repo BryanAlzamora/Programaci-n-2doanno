@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Ejercicio 05 - boton-aviso (evento personalizado)</title>
+</head>
+<body>
+  <boton-aviso></boton-aviso>
+
+  <script>
+    // Ejercicio 5: Emite un evento personalizado 'alerta' con detail
+    class BotonAviso extends HTMLElement {
+      constructor() {
+        super();
+        this.attachShadow({ mode: "open" });
+      }
+
+      connectedCallback() {
+        this.shadowRoot.innerHTML = `
+          <style> button { padding: 8px 12px; border-radius:6px; cursor:pointer; } </style>
+          <button>Emitir aviso</button>
+        `;
+        this.shadowRoot.querySelector("button").addEventListener("click", () => {
+          this.dispatchEvent(new CustomEvent("alerta", {
+            detail: { mensaje: "¡Hola desde boton-aviso!" },
+            bubbles: true,
+            composed: true
+          }));
+        });
+      }
+    }
+    customElements.define("boton-aviso", BotonAviso);
+
+    // Escuchador fuera del componente que reacciona al evento
+    document.addEventListener("alerta", (e) => {
+      alert("Recibido evento alerta: " + e.detail.mensaje);
+    });
+  </script>
+</body>
+</html>

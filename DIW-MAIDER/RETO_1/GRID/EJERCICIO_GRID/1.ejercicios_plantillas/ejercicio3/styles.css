@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+
+  /* Definimos la rejilla principal */
+  grid-template-rows: auto auto 1fr auto;  /* header, nav, contenido, footer */
+  grid-template-columns: .2fr 1fr;        /* aside, main */
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "aside main"
+    "footer footer";
+}
+
+/* Header */
+header {
+  grid-area: header;
+  background: salmon;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+/* Nav */
+nav {
+  grid-area: nav;
+  background: #52cc95;
+  color: white;
+  display: grid;
+  grid-auto-flow: column; /* ul en fila */
+  justify-content: space-between;
+  padding: 1em 1em;
+}
+
+nav ul {
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+/* Aside */
+aside {
+  grid-area: aside;
+  background: lightgrey;
+  padding: 1em;
+  display: grid;
+  gap: 1em;
+}
+
+/* Main */
+main {
+  grid-area: main;
+  padding: 1em;
+  background: #eee;
+  display: grid;
+  gap: 1em; /* espacio entre artículos */
+}
+
+main article img {
+  max-width: 100%;
+  margin: 1em 0;
+}
+
+/* Footer */
+footer {
+  grid-area: footer;
+  background: grey;
+  color: white;
+  display: grid;
+  place-items: center;
+  padding: 1em;
+}
+

@@ -1,0 +1,36 @@
+section{
+    background-color:grey;
+}
+
+h1{
+    text-align:center;
+    color:blue;
+
+}
+.ie::before{
+    content:url("./img/images/ie.png");
+}
+.ie::after{
+    content:".Ie";
+    color:red;
+}
+.chrome::before{
+    content:url("./img/images/chrome.png");
+}
+.chrome::after{
+    content:".Gc";
+    color:red;
+}
+.firefox::before{
+    content:url("./img/images/firefox.png");
+}
+.firefox::after{
+    content:".Ff";
+    color:red;
+}
+
+div{
+    
+    padding:5px;
+    
+}

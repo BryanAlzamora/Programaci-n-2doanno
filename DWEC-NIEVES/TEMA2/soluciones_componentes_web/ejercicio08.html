@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Ejercicio 08 - lista-posts (fetch)</title>
+</head>
+<body>
+  <lista-posts></lista-posts>
+
+  <script>
+    // Ejercicio 8: Obtener datos externos con fetch y mostrarlos
+    class ListaPosts extends HTMLElement {
+      constructor() {
+        super();
+        this.attachShadow({ mode: "open" });
+      }
+
+      async connectedCallback() {
+        this.shadowRoot.innerHTML = `<p>Cargando posts…</p>`;
+        try {
+          const res = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=5");
+          const posts = await res.json();
+          this.shadowRoot.innerHTML = `
+            <style>
+              ul { padding-left: 18px; font-family: Arial, sans-serif; }
+              li { margin-bottom: 6px; }
+            </style>
+            <h3>Últimos posts</h3>
+            <ul>
+              ${posts.map(p => `<li>${p.title}</li>`).join("")}
+            </ul>
+          `;
+        } catch (err) {
+          this.shadowRoot.innerHTML = `<p>Error al cargar posts: ${err.message}</p>`;
+        }
+      }
+    }
+
+    customElements.define("lista-posts", ListaPosts);
+  </script>
+</body>
+</html>

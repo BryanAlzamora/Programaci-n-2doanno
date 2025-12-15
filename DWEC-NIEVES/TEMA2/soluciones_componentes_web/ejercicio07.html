@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Ejercicio 07 - Composición: tarjeta-usuario & lista-usuarios</title>
+</head>
+<body>
+  <lista-usuarios>
+    <tarjeta-usuario nombre="Ana" edad="25"></tarjeta-usuario>
+    <tarjeta-usuario nombre="Luis" edad="30"></tarjeta-usuario>
+    <tarjeta-usuario nombre="María" edad="28"></tarjeta-usuario>
+  </lista-usuarios>
+
+  <script>
+    // Ejercicio 7: Composición de componentes
+    class TarjetaUsuario extends HTMLElement {
+      constructor() {
+        super();
+        this.attachShadow({ mode: "open" });
+      }
+      connectedCallback() {
+        const nombre = this.getAttribute("nombre") || "Sin nombre";
+        const edad = this.getAttribute("edad") || "-";
+        this.shadowRoot.innerHTML = `
+          <style>
+            .tarjeta { border: 1px solid #ccc; border-radius: 6px; padding: 8px; margin: 6px 0; background: #fff; font-family: Arial, sans-serif; }
+            .meta { color: #666; font-size: 0.9rem; }
+          </style>
+          <div class="tarjeta">
+            <div><strong>${nombre}</strong></div>
+            <div class="meta">Edad: ${edad}</div>
+          </div>
+        `;
+      }
+    }
+    customElements.define("tarjeta-usuario", TarjetaUsuario);
+
+    class ListaUsuarios extends HTMLElement {
+      constructor() {
+        super();
+        this.attachShadow({ mode: "open" });
+      }
+      connectedCallback() {
+        // Usamos un slot para mostrar los hijos <tarjeta-usuario> dentro del shadow
+        this.shadowRoot.innerHTML = `
+          <style> :host { display:block; padding:8px; } </style>
+          <slot></slot>
+        `;
+      }
+    }
+    customElements.define("lista-usuarios", ListaUsuarios);
+  </script>
+</body>
+</html>

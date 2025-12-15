@@ -1,0 +1,15 @@
+{
+    "name": "kimbe/bodegas2",
+    "autoload": {
+        "psr-4": {
+            "Kimbe\\Bodegas2\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "BryanAlzamora",
+            "email": "bryandave.alzamora@ikasle.egibide.org"
+        }
+    ],
+    "require": {}
+}

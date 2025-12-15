@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Ejercicio 04 - contador-clicks</title>
+</head>
+<body>
+  <contador-clicks></contador-clicks>
+
+  <script>
+    // Ejercicio 4: Contador que incrementa al hacer clic
+    class ContadorClicks extends HTMLElement {
+      constructor() {
+        super();
+        this.count = 0;
+        this.attachShadow({ mode: "open" });
+      }
+
+      connectedCallback() {
+        this.render();
+      }
+
+      render() {
+        this.shadowRoot.innerHTML = `
+          <style>
+            button { padding: 8px 14px; font-size: 1rem; border-radius: 6px; cursor: pointer; }
+          </style>
+          <button>Has hecho ${this.count} clics</button>
+        `;
+        this.shadowRoot.querySelector("button").onclick = () => {
+          this.count++;
+          this.render();
+        };
+      }
+    }
+    customElements.define("contador-clicks", ContadorClicks);
+  </script>
+</body>
+</html>

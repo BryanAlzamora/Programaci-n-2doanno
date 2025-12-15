@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Ejercicio 10 - app-todo (mini app)</title>
+</head>
+<body>
+  <app-todo></app-todo>
+
+  <script>
+    // Ejercicio 10: Mini app de tareas usando Web Components y localStorage
+
+    class TodoInput extends HTMLElement {
+      constructor() {
+        super();
+        this.attachShadow({ mode: "open" });
+      }
+
+      connectedCallback() {
+        this.shadowRoot.innerHTML = `
+          <style>
+            .wrap { margin-bottom: 8px; }
+            input { padding: 6px; width: 60%; margin-right: 6px; }
+            button { padding: 6px 10px; }
+          </style>
+          <div class="wrap">
+            <input placeholder="Nueva tarea" />
+            <button>Añadir</button>
+          </div>
+        `;
+        const input = this.shadowRoot.querySelector("input");
+        const btn = this.shadowRoot.querySelector("button");
+        btn.addEventListener("click", () => {
+          const valor = input.value && input.value.trim();
+          if (!valor) return;
+          this.dispatchEvent(new CustomEvent("add", { detail: { tarea: valor }, bubbles: true, composed: true }));
+          input.value = "";
+        });
+        input.addEventListener("keydown", (e) => {
+          if (e.key === "Enter") btn.click();
+        });
+      }
+    }
+    customElements.define("todo-input", TodoInput);
+
+    class TodoItem extends HTMLElement {
+      constructor() {
+        super();
+        this.attachShadow({ mode: "open" });
+      }
+      connectedCallback() {
+        const text = this.getAttribute("texto") || "";
+        this.shadowRoot.innerHTML = `
+          <style>
+            .item { display:flex; justify-content:space-between; align-items:center; padding:6px 8px; border-bottom:1px solid #eee; font-family: Arial, sans-serif; }
+            button { background:transparent; border:none; color:#c00; cursor:pointer; }
+          </style>
+          <div class="item">
+            <span>${text}</span>
+            <button title="Eliminar">❌</button>
+          </div>
+        `;
+        this.shadowRoot.querySelector("button").addEventListener("click", () => {
+          this.dispatchEvent(new CustomEvent("delete", { detail: { texto: text }, bubbles: true, composed: true }));
+          this.remove();
+        });
+      }
+    }
+    customElements.define("todo-item", TodoItem);
+
+    class AppTodo extends HTMLElement {
+      constructor() {
+        super();
+        this.attachShadow({ mode: "open" });
+        this.tareas = [];
+      }
+
+      connectedCallback() {
+        this._load();
+        this._render();
+        this.addEventListener("add", (e) => {
+          this._addTarea(e.detail.tarea);
+        });
+        this.addEventListener("delete", (e) => {
+          this._deleteTarea(e.detail.texto);
+        });
+      }
+
+      _load() {
+        try {
+          this.tareas = JSON.parse(localStorage.getItem("tareas_webcomponent_demo") || "[]");
+        } catch (e) {
+          this.tareas = [];
+        }
+      }
+
+      _save() {
+        localStorage.setItem("tareas_webcomponent_demo", JSON.stringify(this.tareas));
+      }
+
+      _addTarea(texto) {
+        this.tareas.push(texto);
+        this._save();
+        this._render();
+      }
+
+      _deleteTarea(texto) {
+        this.tareas = this.tareas.filter(t => t !== texto);
+        this._save();
+        this._render();
+      }
+
+      _render() {
+        this.shadowRoot.innerHTML = `
+          <style>
+            .app { font-family: Arial, sans-serif; max-width: 520px; border:1px solid #ddd; padding:12px; border-radius:8px; background:#fff; }
+            h3 { margin-top: 0; }
+            .lista { margin-top:8px; }
+            .vacio { color:#777; }
+          </style>
+          <div class="app">
+            <h3>Mi lista de tareas</h3>
+            <todo-input></todo-input>
+            <div class="lista">
+              ${this.tareas.length === 0 ? '<div class="vacio">No hay tareas.</div>' : ''}
+              ${this.tareas.map(t => `<todo-item texto="${t.replace(/"/g, '&quot;')}"></todo-item>`).join('')}
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    customElements.define("app-todo", AppTodo);
+  </script>
+</body>
+</html>

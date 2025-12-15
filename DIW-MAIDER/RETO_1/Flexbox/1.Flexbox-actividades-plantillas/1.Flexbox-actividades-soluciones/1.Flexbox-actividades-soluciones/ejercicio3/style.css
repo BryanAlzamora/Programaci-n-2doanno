@@ -1,0 +1,21 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+main{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: lightgrey;
+	height: 100vh;	
+}
+div{
+	background-color: grey;
+	max-width: 30%;
+	padding: 1em;
+}
+div h3{
+	padding-bottom: 1em;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Ejercicio 06 - caja-contenido (slot)</title>
+</head>
+<body>
+  <caja-contenido>
+    <p>Este texto proviene del contenido hijo y aparecerá dentro del slot.</p>
+  </caja-contenido>
+
+  <script>
+    // Ejercicio 6: Uso de <slot> para contenido desde fuera
+    class CajaContenido extends HTMLElement {
+      constructor() {
+        super();
+        this.attachShadow({ mode: "open" });
+        this.shadowRoot.innerHTML = `
+          <style>
+            .caja { border: 2px dashed #aaa; padding: 12px; border-radius: 8px; background: #fafafa; max-width: 480px; font-family: Arial, sans-serif; }
+          </style>
+          <div class="caja"><slot></slot></div>
+        `;
+      }
+    }
+    customElements.define("caja-contenido", CajaContenido);
+  </script>
+</body>
+</html>

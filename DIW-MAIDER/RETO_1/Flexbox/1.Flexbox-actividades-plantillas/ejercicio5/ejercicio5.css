@@ -1,0 +1,37 @@
+body{
+    height: 100vh;
+    background-color: #D9D9D9;
+}
+header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+    height: 20%;
+}
+main{
+    display: flex;
+    height: 70%;
+}
+main nav{
+    order: -1;
+    flex-grow: 1;
+    background-color: darkgrey;
+    padding: 1em;
+}
+main article{
+    flex-grow: 2;
+    background-color: grey;
+    padding: 1em 0;
+}
+main aside{
+    flex-grow: 1;
+    background-color: darkgrey;
+    padding: 1em;
+}
+footer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0;
+}

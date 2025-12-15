@@ -1,0 +1,28 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.header a{
+    text-transform: uppercase;  /* Transforma el texto a mayúsculas */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: black;
+    padding: 0.5em 1em; /* Añade un poco de espacio alrededor del texto */
+}
+.bloque2
+{
+    display:flex;
+    list-style: none;
+    gap:1em; /* Espacio entre los elementos */
+}
+
+.lang{
+    display: flex;
+    gap: 1em;
+}
+.lang_it{
+    background-color: grey;
+    width: 3em;
+    padding: 1em 0;
+}

@@ -1,0 +1,49 @@
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    padding: 1em 0;
+
+    /* sombra solo arriba */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footerTexto {
+  margin-bottom: 1em;
+}
+
+.footerRedes {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerRedes div {
+  background-color: white;
+  border: 1px solid #1156CC;
+  border-radius: 10px;
+  display: flex; /* para centrar el ícono */
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+  padding: 0.2em;
+}
+
+.footerRedes div:hover {
+  background-color: #0d47a1; /* efecto hover */
+}
+
+.footerRedes img {
+  margin: 0;
+  width: 2em;
+}
+
+.footerDerechos {
+  margin-top: 1em;
+  font-size: 0.9em;
+  color: #333;
+}

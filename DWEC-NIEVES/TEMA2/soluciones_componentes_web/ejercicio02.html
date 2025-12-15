@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Ejercicio 02 - saludo-usuario</title>
+</head>
+<body>
+  <!-- Probamos con y sin atributo -->
+  <saludo-usuario nombre="Alex"></saludo-usuario>
+  <saludo-usuario></saludo-usuario>
+
+  <script>
+    // Ejercicio 2: componente que lee un atributo 'nombre'
+    class SaludoUsuario extends HTMLElement {
+      constructor() {
+        super();
+      }
+      connectedCallback() {
+        const nombre = this.getAttribute("nombre") || "usuario";
+        this.innerHTML = `<p>Hola, ${nombre} 👋</p>`;
+      }
+    }
+    customElements.define("saludo-usuario", SaludoUsuario);
+  </script>
+</body>
+</html>

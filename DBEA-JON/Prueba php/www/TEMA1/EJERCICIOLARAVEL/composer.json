@@ -1,0 +1,15 @@
+{
+    "name": "kimbe/ejerciciolaravel",
+    "autoload": {
+        "psr-4": {
+            "Kimbe\\Ejerciciolaravel\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "BryanAlzamora",
+            "email": "bryandave.alzamora@ikasle.egibide.org"
+        }
+    ],
+    "require": {}
+}
