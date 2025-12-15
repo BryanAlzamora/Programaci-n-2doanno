@@ -1,0 +1,92 @@
+@use "sass:math";
+
+
+/*BOTONES*/
+$colores:(
+    error:#ff0000,
+    warning:rgb(239, 241, 120),
+    accepted:rgb(55, 138, 0),
+    normal:rgb(0, 110, 255)
+);
+
+$radioBorde:0.4em;
+
+$b-hover: calc($radioBorde / 2)
+          calc($radioBorde / 2)
+          calc($radioBorde / 2)
+           #888;
+
+.btn{
+    display:inline-block;
+    gap:1em;
+    cursor: pointer;
+    border: $radioBorde;
+    border: solid;
+    
+    &:hover{
+        box-shadow:$b-hover;
+    }
+
+    &:active{
+        background-color: orange;
+        color:white;
+    }
+}
+
+@each $name,$color in $colores{
+    .btn-#{$name} {
+        background-color: $color;
+    }
+}
+
+/*TABLA*/
+$color-bg-tabla-light:#cccccc;
+$color-bg-tabla-dark:#888888;
+
+@function color-col($col){
+    @if($col % 2 == 0){
+        @return $color-bg-tabla-dark;
+    }
+    @else {
+        @return $color-bg-tabla-light;
+    }
+}
+
+
+table{
+
+    th,td{
+        border: $radioBorde;
+        border:solid;
+    }
+    tbody{
+    @for $i from 1 to 10{
+        td:nth-child(#{$i}){
+            background-color: color-col($i);
+        }
+    }
+}
+}
+
+
+/*COLUMNAS*/
+/* Función para calcular el ancho */
+@function col-width($cols) {
+  @return percentage($cols / 8);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+/* Generación de col-1 a col-8 */
+@for $i from 1 to 8 {
+.col-#{$i} {
+    width: col-width($i);
+    min-height: 80px;
+    background-color: lighten(#007bff, $i * 4%);
+    border: 1px solid #fff;
+  }
+}

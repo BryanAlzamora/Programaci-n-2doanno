@@ -1,0 +1,125 @@
+@charset "UTF-8";
+/*BOTONES*/
+.btn {
+  display: inline-block;
+  gap: 1em;
+  cursor: pointer;
+  border: 0.4em;
+  border: solid;
+}
+.btn:hover {
+  box-shadow: 0.2em 0.2em 0.2em #888;
+}
+.btn:active {
+  background-color: orange;
+  color: white;
+}
+
+.btn-error {
+  background-color: #ff0000;
+}
+
+.btn-warning {
+  background-color: rgb(239, 241, 120);
+}
+
+.btn-accepted {
+  background-color: rgb(55, 138, 0);
+}
+
+.btn-normal {
+  background-color: rgb(0, 110, 255);
+}
+
+/*TABLA*/
+table th, table td {
+  border: 0.4em;
+  border: solid;
+}
+table tbody td:nth-child(1) {
+  background-color: #cccccc;
+}
+table tbody td:nth-child(2) {
+  background-color: #888888;
+}
+table tbody td:nth-child(3) {
+  background-color: #cccccc;
+}
+table tbody td:nth-child(4) {
+  background-color: #888888;
+}
+table tbody td:nth-child(5) {
+  background-color: #cccccc;
+}
+table tbody td:nth-child(6) {
+  background-color: #888888;
+}
+table tbody td:nth-child(7) {
+  background-color: #cccccc;
+}
+table tbody td:nth-child(8) {
+  background-color: #888888;
+}
+table tbody td:nth-child(9) {
+  background-color: #cccccc;
+}
+
+/*COLUMNAS*/
+/* Función para calcular el ancho */
+.row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+/* Generación de col-1 a col-8 */
+.col-1 {
+  width: 12.5%;
+  min-height: 80px;
+  background-color: rgb(20.4, 133.56, 255);
+  border: 1px solid #fff;
+}
+
+.col-2 {
+  width: 25%;
+  min-height: 80px;
+  background-color: rgb(40.8, 144.12, 255);
+  border: 1px solid #fff;
+}
+
+.col-3 {
+  width: 37.5%;
+  min-height: 80px;
+  background-color: rgb(61.2, 154.68, 255);
+  border: 1px solid #fff;
+}
+
+.col-4 {
+  width: 50%;
+  min-height: 80px;
+  background-color: rgb(81.6, 165.24, 255);
+  border: 1px solid #fff;
+}
+
+.col-5 {
+  width: 62.5%;
+  min-height: 80px;
+  background-color: rgb(102, 175.8, 255);
+  border: 1px solid #fff;
+}
+
+.col-6 {
+  width: 75%;
+  min-height: 80px;
+  background-color: rgb(122.4, 186.36, 255);
+  border: 1px solid #fff;
+}
+
+.col-7 {
+  width: 87.5%;
+  min-height: 80px;
+  background-color: rgb(142.8, 196.92, 255);
+  border: 1px solid #fff;
+}
+
+/*# sourceMappingURL=styles.css.map */
