@@ -1,0 +1,34 @@
+[
+    {
+       "idPedido":1,
+       "idHostelero":"1111",
+       "fecha":"12/02/2024",
+       "lineas":{
+            "producto":"Cerveza",
+            "cantidad":20,
+            "precio":3
+       }
+    },
+    {
+       "idPedido":1,
+       "idHostelero":"1111",
+       "fecha":"12/02/2024",
+       "lineas":{
+            "producto":"Cerveza",
+            "cantidad":20,
+            "precio":3
+       }
+    },
+    {
+       "idPedido":1,
+       "idHostelero":"1111",
+       "fecha":"12/02/2024",
+       "lineas":{
+            "producto":"Cerveza",
+            "cantidad":20,
+            "precio":3
+       }
+    },
+    
+    
+]
