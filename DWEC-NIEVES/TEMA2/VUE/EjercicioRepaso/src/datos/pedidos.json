@@ -2,33 +2,52 @@
     {
        "idPedido":1,
        "idHostelero":"1111",
-       "fecha":"12/02/2024",
-       "lineas":{
-            "producto":"Cerveza",
-            "cantidad":20,
-            "precio":3
-       }
+       "fecha":"12/02/2021",
+       "lineas":[
+            {
+               "producto":"Cerveza",
+               "cantidad":20,
+               "importe":40
+            },
+            {
+               "producto":"Refresco",
+               "cantidad":50,
+               "importe":100
+            }
+      ]
     },
     {
-       "idPedido":1,
-       "idHostelero":"1111",
-       "fecha":"12/02/2024",
-       "lineas":{
-            "producto":"Cerveza",
-            "cantidad":20,
-            "precio":3
-       }
+       "idPedido":2,
+       "idHostelero":"2222",
+       "fecha":"12/02/2022",
+       "lineas":[
+            {
+               "producto":"Agua",
+               "cantidad":100,
+               "importe":200
+            },
+            {
+               "producto":"Vino",
+               "cantidad":66,
+               "importe":132
+            }
+      ]
     },
     {
-       "idPedido":1,
-       "idHostelero":"1111",
-       "fecha":"12/02/2024",
-       "lineas":{
-            "producto":"Cerveza",
-            "cantidad":20,
-            "precio":3
-       }
-    },
-    
-    
+       "idPedido":3,
+       "idHostelero":"3333",
+       "fecha":"12/02/2023",
+       "lineas":[
+            {
+               "producto":"Vino",
+               "cantidad":60,
+               "importe":120
+            },
+            {
+               "producto":"Cerveza",
+               "cantidad":13,
+               "importe":26
+            }
+      ]
+    } 
 ]

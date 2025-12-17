@@ -12,7 +12,8 @@ export const useClientesStore = defineStore('clientes', () => {
     function fUnCliente(obj)
     {
       // Buscar un cliente con un id y una contraseña
-        unCliente.value = listaClientes.value.find((c)=>c.id == obj.id && c.password == obj.password)
+        unCliente.value = listaClientes.value.find(
+          (c)=>c.id == obj.id && c.password == obj.password)
     }
 
   return {fUnCliente,unCliente}
