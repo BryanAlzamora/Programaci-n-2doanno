@@ -1,9 +1,7 @@
-<script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+<script setup>
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <h1>Inicio</h1>
+  <p>Bienvenido a la aplicación de pedidos del almacén</p>
 </template>

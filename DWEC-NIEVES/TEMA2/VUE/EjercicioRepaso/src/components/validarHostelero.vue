@@ -4,10 +4,11 @@ import{ref,defineEmits} from 'vue'
 const id=ref('');
 const password=ref('');
 
+//evento que se enviará al padre App.vue
 const emit=defineEmits(['validarHostelero']);
 
 function validarPassword(pwd){
-    const expRegular=/^([A-Za-z])([A-Za-z0-9]){8}$/
+    const expRegular=/^(?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])\S{8,}$/
     return expRegular.test(pwd);
 }
 function validarId(id){
@@ -25,9 +26,10 @@ function validarHostelero(){
             throw 'La contraseña no es correcta';
         }
 
-        emit(['validarHostelero'],{
-            id:id.value,
-            password:password.value
+        //Envia los datos al componente padre App.vue
+        emit('validarHostelero', {
+            id: id.value,
+            password: password.value
         })
     }catch(error){
         alert(error)

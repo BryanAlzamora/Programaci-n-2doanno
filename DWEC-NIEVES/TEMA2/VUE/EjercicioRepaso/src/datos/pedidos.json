@@ -1,7 +1,7 @@
 [
     {
        "idPedido":1,
-       "idHostelero":"1111",
+       "idHostelero":1111,
        "fecha":"12/02/2021",
        "lineas":[
             {
@@ -18,7 +18,7 @@
     },
     {
        "idPedido":2,
-       "idHostelero":"2222",
+       "idHostelero":2222,
        "fecha":"12/02/2022",
        "lineas":[
             {
@@ -35,7 +35,7 @@
     },
     {
        "idPedido":3,
-       "idHostelero":"3333",
+       "idHostelero":3333,
        "fecha":"12/02/2023",
        "lineas":[
             {
