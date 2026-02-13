@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <title>Proyecto Práctico Curso BootStrap</title>
-    <!-- Required meta tags -->
+    <!-- Meta tags requeridos -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -13,16 +13,16 @@
   <body>
 
     <div class="container">
-      <!-- HEADER -->
+      <!-- ENCABEZADO -->
       <div class="row justify-content-center my-3">
         <div class="col-4 col-md-3 col-lg-2">
           <img src="img/logo.jpg" class="img-fluid" alt="logo"/>
         </div>
       </div>
-      <!-- MENU -->
+      <!-- MENÚ -->
       <nav class="row align-items-center bg-primary">
         <div class="col-12">
-          <ul class=" my-2 list-inline">
+          <ul class="my-2 list-inline">
             <li class="list-inline-item">
               <a class="text-white" href="#">Inicio</a>
             </li>
@@ -41,9 +41,9 @@
           </ul>
         </div>     
       </nav>
-      <!-- CONTENIDO-->      
+      <!-- CONTENIDO -->      
       <div class="row mt-3 align-items-center">
-        <!--IMAGENES-->
+        <!-- IMÁGENES -->
         <div class="col-md-6">
           <div class="row mt-3">
             <div class="col-6">
@@ -74,7 +74,7 @@
             </div>
           </div>
         </div>
-        <!--TABLA-->
+        <!-- TABLA -->
         <div class="col-md-6 table-responsive">
           <table class="table table-striped table-success table-bordered border-primary">
             <thead class="table-dark">
@@ -136,50 +136,80 @@
           </table>  
         </div>
       </div>
-      <!-- CITAS-->
+      <!-- CITAS -->
       <div class="row justify-content-center bg-primary">
         <div class="col-12">
           <p class="display-4 text-center text-white">SECCION</p>
         </div>
       </div>
       <div class="row justify-content-around bg-light rounded p-3 m-2">
-          <div class="col-md-3 position-relative">
-                
-            <img src="img/logo.jpg" class="img-fluid rounded" alt="logo"/>
-            <p class="text-center">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-          </div>
-          <div class="col-md-3 position-relative">
-      
-            <img src="img/logo.jpg" class="img-fluid rounded" alt="logo"/>
-            <p class="text-center">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-          </div>
-          <div class="col-md-3 position-relative">
-            
-            <img src="img/logo.jpg" class="img-fluid rounded" alt="logo"/>
-            <p class="text-center">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-          </div>
+        <div class="col-md-3 position-relative">
+          <img src="img/logo.jpg" class="img-fluid rounded" alt="logo"/>
+          <p class="text-center">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
         </div>
+        <div class="col-md-3 position-relative">
+          <img src="img/logo.jpg" class="img-fluid rounded" alt="logo"/>
+          <p class="text-center">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div class="col-md-3 position-relative">
+          <img src="img/logo.jpg" class="img-fluid rounded" alt="logo"/>
+          <p class="text-center">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+      </div>
       <!-- FORMULARIO -->
-      <div class="row justify-content-center bg-primary">
-          <div class="col-12">
-              <p class="display-4 text-center text-white">FORMULARIO</p>
-          </div>
+<div class="row justify-content-center bg-primary mt-3">
+  <div class="col-12">
+    <p class="display-4 text-center text-white">CONTACTO</p>
+  </div>
+</div>
+
+<div class="row justify-content-center p-3">
+  <!-- Formulario de contacto -->
+  <div class="col-12 col-md-8 col-lg-6">
+    <form>
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" required>
       </div>
-      <div>
-        
+      <div class="mb-3">
+        <label for="apellido" class="form-label">Apellido</label>
+        <input type="text" class="form-control" id="apellido" required>
       </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Correo Electrónico</label>
+        <input type="email" class="form-control" id="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="provincia" class="form-label">Provincia</label>
+        <input type="text" class="form-control" id="provincia">
+      </div>
+      <div class="mb-3">
+        <label for="codigoPostal" class="form-label">Código Postal</label>
+        <input type="text" class="form-control" id="codigoPostal">
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="terminosCondiciones">
+        <label class="form-check-label" for="terminosCondiciones">
+          Acepto términos y condiciones
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+    </form>
+  </div>
+</div>
+
     
-      <!-- PIE -->
-      <div class="row bg-primary justify-content-center pY-3">
+      <!-- PIE DE PÁGINA -->
+      <div class="row bg-primary justify-content-center py-3">
         <div class="col-2 col-md-1">
           <img src="img/twitter.png" class="img-fluid" alt="twitter"/>
         </div>

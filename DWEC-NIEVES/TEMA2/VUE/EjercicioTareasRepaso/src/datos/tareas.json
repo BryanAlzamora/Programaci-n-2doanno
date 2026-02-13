@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "titulo": "Comprar despensa",
+        "descripcion": "Ir al supermercado a comprar pan, leche y huevos",
+        "fecha": "2025-01-15",
+        "estado": "completado"
+    },
+    {
+        "id": 2,
+        "titulo": "Revisar correos",
+        "descripcion": "Responder los correos pendientes del trabajo",
+        "fecha": "2025-01-20",
+        "estado": "no completado"
+    },
+    {
+        "id": 3,
+        "titulo": "Llamar al dentista",
+        "descripcion": "Agendar cita para limpieza dental",
+        "fecha": "2025-01-18",
+        "estado": "no completado"
+    },
+    {
+        "id": 4,
+        "titulo": "Estudiar Vue.js",
+        "descripcion": "Practicar componentes y stores con Pinia",
+        "fecha": "2025-01-22",
+        "estado": "completado"
+    }
+]
